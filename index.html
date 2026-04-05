@@ -1,452 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hyungjin Kim — Economist</title>
-  <meta name="description" content="Hyungjin Kim is an Associate Research Fellow at the Korea Development Institute. Research in international trade and industrial organization.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyungjin Kim</title>
+    <style>
+        :root {
+            --text: #1a1a1a;
+            --muted: #555;
+            --link: #1a5276;
+            --bg: #fff;
+            --border: #ddd;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        header { margin-bottom: 40px; }
+        h1 { font-size: 2rem; font-weight: 600; margin-bottom: 8px; }
+        .affiliation { font-size: 1rem; color: var(--muted); margin-bottom: 6px; }
+        .contact { font-size: 0.95rem; color: var(--muted); }
+        .contact a { color: var(--link); text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
 
-    :root {
-      --color-bg: #faf9f7;
-      --color-surface: #ffffff;
-      --color-text: #1a1a1a;
-      --color-text-secondary: #555555;
-      --color-accent: #1a3a5c;
-      --color-accent-light: #2a5a8c;
-      --color-border: #e0ddd8;
-      --color-border-light: #edeae5;
-      --color-tag-bg: #eef2f7;
-      --color-tag-text: #2a5a8c;
-      --color-highlight: #f0e6d3;
-      --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-      --font-body: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
-      --max-width: 780px;
-      --space-xs: 0.5rem;
-      --space-sm: 1rem;
-      --space-md: 1.75rem;
-      --space-lg: 3rem;
-      --space-xl: 5rem;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font-body);
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.7;
-      font-size: 16px;
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* ── LAYOUT ── */
-    .page-wrapper {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: var(--space-xl) var(--space-md);
-    }
-
-    @media (max-width: 600px) {
-      .page-wrapper { padding: var(--space-lg) var(--space-sm); }
-    }
-
-    /* ── HEADER ── */
-    header {
-      margin-bottom: var(--space-xl);
-      animation: fadeUp 0.7s ease-out both;
-    }
-
-    .header-rule {
-      width: 48px;
-      height: 3px;
-      background: var(--color-accent);
-      border: none;
-      margin-bottom: var(--space-md);
-    }
-
-    h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5vw, 3.2rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: var(--color-text);
-      line-height: 1.15;
-      margin-bottom: var(--space-xs);
-    }
-
-    .subtitle {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 400;
-      font-style: italic;
-      color: var(--color-text-secondary);
-      margin-bottom: var(--space-md);
-    }
-
-    .bio {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--color-text-secondary);
-      max-width: 620px;
-    }
-
-    .bio strong {
-      color: var(--color-text);
-      font-weight: 500;
-    }
-
-    /* ── NAV LINKS ── */
-    .header-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-sm) var(--space-md);
-      margin-top: var(--space-md);
-    }
-
-    .header-links a {
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      text-decoration: none;
-      padding-bottom: 2px;
-      border-bottom: 1.5px solid transparent;
-      transition: border-color 0.25s ease, color 0.25s ease;
-    }
-
-    .header-links a:hover {
-      border-bottom-color: var(--color-accent);
-      color: var(--color-accent-light);
-    }
-
-    .header-links a svg {
-      width: 14px;
-      height: 14px;
-      vertical-align: -1px;
-      margin-right: 4px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-    }
-
-    /* ── SECTIONS ── */
-    section {
-      margin-bottom: var(--space-xl);
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-lg);
-      animation: fadeUp 0.7s ease-out both;
-    }
-
-    .section-header h2 {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--color-text);
-      white-space: nowrap;
-    }
-
-    .section-header::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--color-border);
-    }
-
-    /* ── PAPER CARD ── */
-    .paper {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border-light);
-      border-radius: 6px;
-      padding: var(--space-md) var(--space-md) var(--space-md);
-      margin-bottom: var(--space-md);
-      transition: box-shadow 0.3s ease, border-color 0.3s ease;
-      animation: fadeUp 0.6s ease-out both;
-    }
-
-    .paper:nth-child(2) { animation-delay: 0.08s; }
-    .paper:nth-child(3) { animation-delay: 0.16s; }
-    .paper:nth-child(4) { animation-delay: 0.24s; }
-
-    .paper:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      border-color: var(--color-border);
-    }
-
-    .paper-title {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 0.35rem;
-    }
-
-    .paper-title a {
-      color: var(--color-text);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .paper-title a:hover {
-      color: var(--color-accent-light);
-    }
-
-    .paper-coauthors {
-      font-size: 0.95rem;
-      color: var(--color-text-secondary);
-      margin-bottom: var(--space-sm);
-      font-style: italic;
-    }
-
-    .paper-abstract {
-      font-size: 0.92rem;
-      line-height: 1.75;
-      color: var(--color-text-secondary);
-      overflow: hidden;
-      transition: max-height 0.45s ease;
-      max-height: 0;
-    }
-
-    .paper-abstract.open {
-      max-height: 600px;
-    }
-
-    .paper-abstract p {
-      padding-bottom: var(--space-sm);
-    }
-
-    .paper-actions {
-      display: flex;
-      gap: var(--space-sm);
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-abstract {
-      font-family: var(--font-body);
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      background: var(--color-tag-bg);
-      border: none;
-      padding: 5px 14px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .btn-abstract:hover {
-      background: var(--color-accent);
-      color: #fff;
-    }
-
-    .paper-link {
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      text-decoration: none;
-      padding: 5px 0;
-      transition: color 0.2s ease;
-    }
-
-    .paper-link:hover { color: var(--color-accent-light); }
-
-    .paper-link svg {
-      width: 12px; height: 12px;
-      vertical-align: -1px;
-      margin-left: 3px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2.5;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--color-border);
-      padding-top: var(--space-md);
-      margin-top: var(--space-xl);
-      animation: fadeUp 0.7s ease-out both;
-    }
-
-    footer p {
-      font-size: 0.85rem;
-      color: var(--color-text-secondary);
-      line-height: 1.7;
-    }
-
-    footer a {
-      color: var(--color-accent);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s ease;
-    }
-
-    footer a:hover { border-bottom-color: var(--color-accent); }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── PRINT ── */
-    @media print {
-      body { background: #fff; font-size: 11pt; }
-      .page-wrapper { padding: 0; max-width: 100%; }
-      .paper { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
-      .btn-abstract { display: none; }
-      .paper-abstract { max-height: none !important; }
-      footer { margin-top: 2rem; }
-    }
-  </style>
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border);
+        }
+        .paper { margin-bottom: 24px; }
+        .paper-title {
+            font-weight: 600;
+            font-size: 1.02rem;
+        }
+        .paper-title a { color: var(--link); text-decoration: none; }
+        .paper-title a:hover { text-decoration: underline; }
+        .paper-authors {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+        .paper-note {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+        .cv-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 0.95rem;
+        }
+        .cv-link a { color: var(--link); text-decoration: none; }
+        .cv-link a:hover { text-decoration: underline; }
+        footer {
+            margin-top: 60px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+    </style>
 </head>
 <body>
-  <div class="page-wrapper">
 
-    <!-- HEADER -->
-    <header>
-      <hr class="header-rule">
-      <h1>Hyungjin Kim</h1>
-      <p class="subtitle">Associate Research Fellow, Korea Development Institute</p>
-      <p class="bio">
-        My research interests are in <strong>international trade</strong> and <strong>industrial organization</strong>.
-        I study how production networks, firm-to-firm relationships, and market structure alter the predictions
-        and policy implications of standard trade models.
-      </p>
-      <div class="header-links">
-        <a href="papers/HyungjinKim_CV.pdf" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>CV
-        </a>
-        <a href="mailto:hyungjinkim@kdi.re.kr">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>hyungjinkim@kdi.re.kr
-        </a>
-      </div>
-    </header>
-
-    <!-- WORKING PAPERS -->
-    <section>
-      <div class="section-header">
-        <h2>Working Papers</h2>
-      </div>
-
-      <!-- Paper 1 -->
-      <article class="paper">
-        <h3 class="paper-title">
-          <a href="papers/paper_static.pdf" target="_blank" rel="noopener">
-            Export Controls and Endogenous Upstream Price Incidence: The Chip War's Consequences for the AI-Chip Industry
-          </a>
-        </h3>
-        <div class="paper-actions">
-          <button class="btn-abstract" onclick="toggleAbstract(this)" aria-expanded="false">Abstract ▾</button>
-          <a class="paper-link" href="papers/paper_static.pdf" target="_blank" rel="noopener">
-            PDF<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-        </div>
-        <div class="paper-abstract">
-          <p>
-            Modern semiconductor production is vertical, granular, and concentrated. Standard trade models treat export controls as output wedges that leave input costs unchanged. This paper shows that in a bilateral oligopoly, such controls also renegotiate upstream input prices. I develop a vertical production network model in which AI-chip designers negotiate with a concentrated set of High-Bandwidth Memory (HBM) suppliers. Using administrative customs data, I document destination-specific unit-value divergences consistent with relationship-specific bargaining; bilateral link prices are not directly observed but are recovered from equilibrium moment conditions. In the calibrated model, upstream suppliers act as shock absorbers: they lower input prices for the targeted buyer to preserve volume, dampening the regulatory impact. This deflationary channel is active when buyer surplus is log-submodular in its input price and the trade wedge — a condition the baseline calibration satisfies. In the calibrated baseline under the benchmark export-control scenario, the upstream price adjustment is roughly one-seventh of the downstream markup response; this ratio varies substantially with demand curvature and bargaining leverage (see sensitivity analysis). These findings imply that models that treat input prices as fixed — the standard approach in quantitative trade analysis — overestimate the competitive reallocation caused by export controls in concentrated high-tech supply chains.
-          </p>
-        </div>
-      </article>
-
-      <!-- Paper 2 -->
-      <article class="paper">
-        <h3 class="paper-title">
-          <a href="papers/note_static_competition.pdf" target="_blank" rel="noopener">
-            Equilibrium Uniqueness in Entry Games with Combinatorial Actions and Endogenous Pricing
-          </a>
-        </h3>
-        <div class="paper-actions">
-          <button class="btn-abstract" onclick="toggleAbstract(this)" aria-expanded="false">Abstract ▾</button>
-          <a class="paper-link" href="papers/note_static_competition.pdf" target="_blank" rel="noopener">
-            PDF<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-        </div>
-        <div class="paper-abstract">
-          <p>
-            I prove equilibrium uniqueness for combinatorial entry games with endogenous variable markups, where each firm chooses a subset of actions and firms compete under Atkeson–Burstein pricing. When firms have private cost information, the activation decision reduces to a threshold system whose contraction modulus vanishes at both extremes of noise. If the peak modulus is below one — a condition verifiable from primitives — the Bayesian Nash equilibrium is unique for all noise levels. Each firm's problem remains supermodular, so existing combinatorial solvers apply. Numerical experiments with up to 2^40 subsets per firm confirm uniqueness at all tested parameterizations.
-          </p>
-        </div>
-      </article>
-
-      <!-- Paper 3 -->
-      <article class="paper">
-        <h3 class="paper-title">
-          <a href="papers/main_trade_mp.pdf" target="_blank" rel="noopener">
-            Trade, Multinational Production, and Regional Inequality
-          </a>
-        </h3>
-        <p class="paper-coauthors">with Mira Rim</p>
-        <div class="paper-actions">
-          <button class="btn-abstract" onclick="toggleAbstract(this)" aria-expanded="false">Abstract ▾</button>
-          <a class="paper-link" href="papers/main_trade_mp.pdf" target="_blank" rel="noopener">
-            PDF<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-        </div>
-        <div class="paper-abstract">
-          <p>
-            Globalization is often accompanied by declining barriers to both international trade and multinational production (MP), yet their joint implications for regional economies remain insufficiently understood. This paper examines how China's reductions in trade and MP barriers affected regional inequality in Korea, focusing on welfare and population distribution across regions. We first provide reduced-form evidence that regional exposure to MP, alongside trade, is an important and independent determinant of local employment. We then develop a multi-country, multi-sector general equilibrium model with trade, MP, and internal migration to quantify how China's cost reductions over 2000–2007 reshaped regional welfare and population allocation in Korea. The aggregate welfare gain is approximately 2.0%, with regional per-worker gains ranging from 1.7% in Seoul/Capital to 2.5% in the Southeast. Trade accounts for 1.4 percentage points of this gain, internal migration for 0.55 percentage points, and the vertical MP channel — through which affiliates abroad source inputs from the domestic parent — for less than 0.05 percentage points. By jointly analyzing trade and MP, the paper shows that ignoring the MP channel would attenuate the estimated import-competition effect and misattribute part of the employment response to trade exposure alone.
-          </p>
-        </div>
-      </article>
-
-      <!-- Paper 4 -->
-      <article class="paper">
-        <h3 class="paper-title">
-          <a href="papers/main_triadic_gravity.pdf" target="_blank" rel="noopener">
-            Triadic Gravity in Intermediated Petrochemical Trade
-          </a>
-        </h3>
-        <p class="paper-coauthors">with Yang Shen</p>
-        <div class="paper-actions">
-          <button class="btn-abstract" onclick="toggleAbstract(this)" aria-expanded="false">Abstract ▾</button>
-          <a class="paper-link" href="papers/main_triadic_gravity.pdf" target="_blank" rel="noopener">
-            PDF<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-        </div>
-        <div class="paper-abstract">
-          <p>
-            How does intermediated trade alter the response of bilateral trade flows to cost shocks? We show that when firms can reroute shipments through intermediary hubs, the bilateral trade elasticity is strictly attenuated relative to the standard gravity benchmark — attenuated by a factor equal to the share of trade currently flowing directly between origin and destination. We establish this result theoretically and validate it using transaction-level data from a Korean petrochemical trading house with 25 offices worldwide, where we observe the complete buyer–seller–intermediary triad for every shipment. In this network, 84.5% of origin–destination pairs route all trade through hubs, so a direct-route cost shock leaves their bilateral trade volume entirely unchanged — while standard gravity would predict a large negative response for those same pairs. Aggregating across all routes, standard gravity overstates the bilateral trade-flow response to a uniform cost shock by roughly an order of magnitude in this network (value-weighted factor of 6.5; range 3×–13× depending on the substitution elasticity). These findings imply that bilateral gravity models systematically overstate trade losses from tariff increases in sectors with deep intermediation.
-          </p>
-        </div>
-      </article>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>
-        Hyungjin Kim · Korea Development Institute<br>
+<header>
+    <h1>Hyungjin Kim</h1>
+    <div class="affiliation">Fellow, Korea Development Institute (KDI)</div>
+    <div class="contact">
         <a href="mailto:hyungjinkim@kdi.re.kr">hyungjinkim@kdi.re.kr</a>
-      </p>
-    </footer>
+    </div>
+    <div class="cv-link"><a href="papers/HyungjinKim_CV.pdf">Curriculum Vitae (PDF)</a></div>
+</header>
 
-  </div>
+<h2>Working Papers</h2>
 
-  <script>
-    function toggleAbstract(btn) {
-      const abstractEl = btn.closest('.paper').querySelector('.paper-abstract');
-      const isOpen = abstractEl.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen);
-      btn.textContent = isOpen ? 'Abstract ▴' : 'Abstract ▾';
-    }
-  </script>
+<div class="paper">
+    <div class="paper-title"><a href="papers/paper_static.pdf">Export Controls and Endogenous Upstream Price Incidence: The Chip War's Consequences for the AI-Chip Industry</a></div>
+</div>
+
+<div class="paper">
+    <div class="paper-title"><a href="papers/main_trade_mp.pdf">Trade, Multinational Production, and Regional Inequality</a></div>
+    <div class="paper-authors">with Mira Rim</div>
+</div>
+
+<div class="paper">
+    <div class="paper-title"><a href="papers/main_triadic_gravity.pdf">Triadic Gravity in Intermediated Petrochemical Trade</a></div>
+    <div class="paper-authors">with Yang Shen</div>
+</div>
+
+<div class="paper">
+    <div class="paper-title"><a href="papers/bias_theorem.pdf">Aggregation Bias in Quantitative Trade and Spatial Economics</a></div>
+</div>
+
+<div class="paper">
+    <div class="paper-title"><a href="papers/note_static_competition.pdf">Equilibrium Uniqueness in Entry Games with Combinatorial Actions and Endogenous Pricing</a></div>
+</div>
+
+<div class="paper">
+    <div class="paper-title"><a href="papers/main_round_numbers.pdf">Round Numbers, Media Cascades, and Market Attention: Evidence from Stock Index Milestones</a></div>
+</div>
+
+<footer>
+    &copy; Hyungjin Kim
+</footer>
+
 </body>
 </html>
