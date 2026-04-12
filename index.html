@@ -373,6 +373,7 @@
             Equilibrium Uniqueness in Entry Games with Combinatorial Actions and Endogenous Pricing
           </a>
         </h3>
+        <p class="paper-coauthors">with Sungwan Hong</p>
         <div class="paper-actions">
           <button class="btn-abstract" onclick="toggleAbstract(this)" aria-expanded="false">Abstract ▾</button>
           <a class="paper-link" href="papers/note_static_competition.pdf" target="_blank" rel="noopener">
@@ -381,7 +382,7 @@
         </div>
         <div class="paper-abstract">
           <p>
-            I prove equilibrium uniqueness for combinatorial entry games with endogenous variable markups, where each firm chooses a subset of actions and firms compete under Atkeson–Burstein pricing. When firms have private cost information, the activation decision reduces to a threshold system whose contraction modulus vanishes at both extremes of noise. If the peak modulus is below one — a condition verifiable from primitives — the Bayesian Nash equilibrium is unique for all noise levels. Each firm's problem remains supermodular, so existing combinatorial solvers apply. Numerical experiments with up to 2^40 subsets per firm confirm uniqueness at all tested parameterizations.
+            We prove equilibrium uniqueness for a class of combinatorial entry games with endogenous pricing&mdash;games in which each firm chooses a subset of available actions (e.g., which countries to produce in) and firms then compete under variable markups &agrave; la Atkeson and Burstein (2008). The combination of combinatorial entry and endogenous markups creates a three-way circularity&mdash;activation shifts market shares, which change markups, which feed back into activation incentives&mdash;that existing frameworks do not address. We show this circularity is self-limiting: when firms have private information on action-specific fixed costs, the activation decision reduces to a threshold system whose contraction modulus decomposes into three interpretable forces. The modulus vanishes at both extremes of noise&mdash;large noise dampens responses while small noise pushes thresholds into the tails of the cost distribution&mdash;so when its peak is below one the Bayesian Nash equilibrium is unique for all noise levels&mdash;a condition verifiable from model primitives without solving the game. Each firm's activation problem remains supermodular despite the pricing channel, so existing combinatorial solvers apply without modification. In numerical experiments on cloud-infrastructure deployment with up to 2<sup>40</sup> candidate subsets per firm, the peak contraction modulus is 0.95, confirming global uniqueness.
           </p>
         </div>
       </article>
