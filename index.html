@@ -361,7 +361,7 @@
         </div>
         <div class="paper-abstract">
           <p>
-            Modern semiconductor production is vertical, granular, and concentrated. Standard trade models treat export controls as output wedges that leave input costs unchanged. This paper shows that in a bilateral oligopoly, such controls also renegotiate upstream input prices. I develop a vertical production network model in which AI-chip designers negotiate with a concentrated set of High-Bandwidth Memory (HBM) suppliers. Using administrative customs data, I document destination-specific unit-value divergences consistent with relationship-specific bargaining; bilateral link prices are not directly observed but are recovered from equilibrium moment conditions. In the calibrated model, upstream suppliers act as shock absorbers: they lower input prices for the targeted buyer to preserve volume, dampening the regulatory impact. This deflationary channel is active when buyer surplus is log-submodular in its input price and the trade wedge — a condition the baseline calibration satisfies. In the calibrated baseline under the benchmark export-control scenario, the upstream price adjustment is roughly one-seventh of the downstream markup response; this ratio varies substantially with demand curvature and bargaining leverage (see sensitivity analysis). These findings imply that models that treat input prices as fixed — the standard approach in quantitative trade analysis — overestimate the competitive reallocation caused by export controls in concentrated high-tech supply chains.
+            Modern semiconductor production is vertical, granular, and concentrated. This paper shows that in a bilateral oligopoly, export controls force a renegotiation of upstream input prices &mdash; a channel absent from standard quantitative trade models that treat input costs as fixed. I develop a vertical production network model in which AI-chip designers negotiate with a concentrated set of High-Bandwidth Memory (HBM) suppliers via Nash-in-Nash bargaining. Using Korean customs data, I document destination-specific price divergences consistent with relationship-specific bargaining. In the calibrated model, targeted buyers' input prices fall while rivals' input prices rise &mdash; the upstream shock-absorber and cross-buyer spillover channels. The input-price adjustment is roughly one-fifth of the downstream markup response, and a frozen-input counterfactual that ignores this renegotiation overestimates the competitive reallocation caused by export controls. Network composition matters: adding a single qualified supplier dampens the targeted buyer's markup increase by approximately 46 percent.
           </p>
         </div>
       </article>
@@ -382,7 +382,7 @@
         </div>
         <div class="paper-abstract">
           <p>
-            We prove equilibrium uniqueness for a class of combinatorial entry games with endogenous pricing&mdash;games in which each firm chooses a subset of available actions (e.g., which countries to produce in) and firms then compete under variable markups &agrave; la Atkeson and Burstein (2008). The combination of combinatorial entry and endogenous markups creates a three-way circularity&mdash;activation shifts market shares, which change markups, which feed back into activation incentives&mdash;that existing frameworks do not address. We show this circularity is self-limiting: when firms have private information on action-specific fixed costs, the activation decision reduces to a threshold system whose contraction modulus decomposes into three interpretable forces. The modulus vanishes at both extremes of noise&mdash;large noise dampens responses while small noise pushes thresholds into the tails of the cost distribution&mdash;so when its peak is below one the Bayesian Nash equilibrium is unique for all noise levels&mdash;a condition verifiable from model primitives without solving the game. Each firm's activation problem remains supermodular despite the pricing channel, so existing combinatorial solvers apply without modification. In numerical experiments on cloud-infrastructure deployment with up to 2<sup>40</sup> candidate subsets per firm, the peak contraction modulus is 0.95, confirming global uniqueness.
+            Combinatorial entry games combine subset choice, within-firm complementarities, and strategic substitutes, but existing uniqueness results either treat entry as binary, assume constant markups, or take the active set as given. We develop a uniqueness framework for combinatorial entry with endogenous Atkeson&ndash;Burstein markups. The key object is a decomposition of the threshold-map Jacobian into density dampening, marginal-value sensitivity, and threshold location, which implies a bathtub-shaped contraction modulus in private-cost noise. When its peak is below one, the Bayesian Nash equilibrium is unique for all noise levels, and supermodularity of the single-firm problem is preserved so existing CDCP solvers remain applicable. In a quantitative application to global cloud infrastructure entry (five providers, 42 countries), the calibrated model matches 99.5% of in-sample entry decisions, and endogenous markups sustain 15 additional firm-market pairs and lower consumer surplus by 10.6% relative to a constant-markup benchmark.
           </p>
         </div>
       </article>
@@ -403,12 +403,52 @@
         </div>
         <div class="paper-abstract">
           <p>
-            Globalization is often accompanied by declining barriers to both international trade and multinational production (MP), yet their joint implications for regional economies remain insufficiently understood. This paper examines how China's reductions in trade and MP barriers affected regional inequality in Korea, focusing on welfare and population distribution across regions. We first provide reduced-form evidence that regional exposure to MP, alongside trade, is an important and independent determinant of local employment. We then develop a multi-country, multi-sector general equilibrium model with trade, MP, and internal migration to quantify how China's cost reductions over 2000–2007 reshaped regional welfare and population allocation in Korea. The aggregate welfare gain is approximately 2.0%, with regional per-worker gains ranging from 1.7% in Seoul/Capital to 2.5% in the Southeast. Trade accounts for 1.4 percentage points of this gain, internal migration for 0.55 percentage points, and the vertical MP channel — through which affiliates abroad source inputs from the domestic parent — for less than 0.05 percentage points. By jointly analyzing trade and MP, the paper shows that ignoring the MP channel would attenuate the estimated import-competition effect and misattribute part of the employment response to trade exposure alone.
+            Globalization is often accompanied by declining barriers to both international trade and multinational production (MP), yet their joint implications for regional economies remain insufficiently understood. This paper examines how China's reductions in trade and MP barriers affected regional inequality in Korea, focusing on welfare and population distribution across regions. We first provide reduced-form evidence that regional exposure to MP, alongside trade, is an important and independent determinant of local employment. We then develop a multi-country, multi-sector general equilibrium model with trade, MP, and internal migration to quantify how China's cost reductions over 2000&ndash;2007 reshaped regional welfare and population allocation in Korea. The aggregate welfare gain is approximately 2.0%, with regional per-worker gains ranging from 1.7% in Seoul/Capital to 2.5% in the Southeast. Trade accounts for 1.4 percentage points of this gain, internal migration for 0.55 percentage points, and the vertical MP channel&mdash;through which affiliates abroad source inputs from the domestic parent&mdash;for approximately 0.04 percentage points. A skill-stratified extension of the model shows that the gains are regressively distributed: low-skill workers gain 2.6% on average versus 1.8% for high-skill workers, with the gap widest (&minus;1.2 percentage points) in the Southeast manufacturing cluster. By jointly analyzing trade and MP, the paper shows that ignoring the MP channel would attenuate the estimated import-competition effect and misattribute part of the employment response to trade exposure alone.
           </p>
         </div>
       </article>
 
       <!-- Paper 4 -->
+      <article class="paper">
+        <h3 class="paper-title">
+          <a href="papers/bias_theorem.pdf" target="_blank" rel="noopener">
+            Aggregation Bias in Quantitative Trade and Spatial Economics
+          </a>
+        </h3>
+        <div class="paper-actions">
+          <button class="btn-abstract" onclick="toggleAbstract(this)" aria-expanded="false">Abstract &#9662;</button>
+          <a class="paper-link" href="papers/bias_theorem.pdf" target="_blank" rel="noopener">
+            PDF<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <div class="paper-abstract">
+          <p>
+            We characterize the bias from data aggregation in quantitative trade models that use exact hat algebra. We derive six results: a zero-bias condition requiring identical within-aggregate primitives; an exact decomposition into trade share and elasticity channels; I&ndash;O amplification through the Leontief inverse (&sim;2&times;); a three-layer GE decomposition where wage feedback dominates (&sim;5&times; amplification); an upper bound with zero violations across 155 checks; and sufficient conditions for safe aggregation. Application to the Caliendo&ndash;Parro (2015) NAFTA counterfactual reveals 58&ndash;65% welfare sign reversals, driven primarily by baseline parameter inconsistency in naively aggregated models. As an illustrative extension, spatial aggregation of the CDP2019 China shock produces up to 100% sign reversals. Random concordance analysis confirms the bias is structural. Bias correction from aggregate data alone proves infeasible.
+          </p>
+        </div>
+      </article>
+
+      <!-- Paper 5 -->
+      <article class="paper">
+        <h3 class="paper-title">
+          <a href="papers/main_round_numbers.pdf" target="_blank" rel="noopener">
+            Round Numbers, Media Cascades, and Market Attention: Evidence from Stock Index Milestones
+          </a>
+        </h3>
+        <div class="paper-actions">
+          <button class="btn-abstract" onclick="toggleAbstract(this)" aria-expanded="false">Abstract &#9662;</button>
+          <a class="paper-link" href="papers/main_round_numbers.pdf" target="_blank" rel="noopener">
+            PDF<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <div class="paper-abstract">
+          <p>
+            When a major stock index crosses a round-number milestone, media coverage surges far beyond the response to non-round crossings. I exploit a &ldquo;roundness gradient&rdquo;&mdash;comparing responses around X,000, X,500, and X,100 crossings&mdash;to study how these salience shocks affect price discovery. Across S&amp;P&nbsp;500 and DJIA milestones, an X,000 crossing generates roughly eight times more abnormal news coverage than an X,100 crossing. In cross-sectional tests, stocks most reliant on gradual information diffusion experience significantly lower abnormal returns at rounder milestones, consistent with attention reallocation away from firm-specific processing. Pooling 348 crossings across seven international indices confirms the phenomenon extends beyond the United States.
+          </p>
+        </div>
+      </article>
+
+      <!-- Paper 6 -->
       <article class="paper">
         <h3 class="paper-title">
           <a href="papers/main_triadic_gravity.pdf" target="_blank" rel="noopener">
@@ -424,7 +464,7 @@
         </div>
         <div class="paper-abstract">
           <p>
-            How does intermediated trade alter the response of bilateral trade flows to cost shocks? We show that when firms can reroute shipments through intermediary hubs, the bilateral trade elasticity is strictly attenuated relative to the standard gravity benchmark — attenuated by a factor equal to the share of trade currently flowing directly between origin and destination. We establish this result theoretically and validate it using transaction-level data from a Korean petrochemical trading house with 25 offices worldwide, where we observe the complete buyer–seller–intermediary triad for every shipment. In this network, 84.5% of origin–destination pairs route all trade through hubs, so a direct-route cost shock leaves their bilateral trade volume entirely unchanged — while standard gravity would predict a large negative response for those same pairs. Aggregating across all routes, standard gravity overstates the bilateral trade-flow response to a uniform cost shock by roughly an order of magnitude in this network (value-weighted factor of 6.5; range 3×–13× depending on the substitution elasticity). These findings imply that bilateral gravity models systematically overstate trade losses from tariff increases in sectors with deep intermediation.
+            How does intermediated trade alter the response of bilateral trade flows to cost shocks? We show that when firms can reroute shipments through intermediary hubs, the bilateral trade elasticity is strictly attenuated relative to the standard gravity benchmark&mdash;under Pareto productivity, attenuated by a factor equal to the share of trade currently flowing directly between origin and destination. We establish this result theoretically and validate it using transaction-level data from a Korean petrochemical trading house with 25 offices worldwide, where we observe the complete buyer&ndash;seller&ndash;intermediary triad for every shipment. In this network, 84.5% of origin&ndash;destination pairs route all trade through hubs, so a direct-route cost shock leaves their bilateral trade volume entirely unchanged&mdash;while standard gravity would predict a large negative response for those same pairs. Aggregating across all routes, standard gravity overstates the bilateral trade-flow response to a uniform cost shock by a value-weighted factor of 6.3 within this intermediary's network (range 3.2&times;&ndash;13&times; depending on the substitution elasticity); accounting for the share of trade that bypasses intermediaries entirely, the economy-wide overstatement is approximately 1.2&ndash;1.4&times; under an illustrative calibration of the intermediary sector's market share. These findings imply that bilateral gravity models systematically overstate trade-flow responses to route-specific cost shocks&mdash;such as corridor-level shipping costs, logistics frictions, and spoke-side tariffs&mdash;in sectors with deep intermediation.
           </p>
         </div>
       </article>
